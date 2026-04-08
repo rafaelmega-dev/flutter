@@ -15,9 +15,9 @@ class MyApp extends StatelessWidget {
         
         body: Center(
           child: Container(
-          width: 200,
-          height: 100,
-          color: Colors.green,
+          width: 350,
+          height: 200,
+          color: const Color.fromARGB(255, 0, 17, 1),
           child: Center(
             child: Text("Olá Flutter",style: TextStyle(color: Colors.white)),
           ),
