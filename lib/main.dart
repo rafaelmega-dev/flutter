@@ -11,82 +11,141 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text('Exemplo Container')),
-        
+        appBar: AppBar(title: Text('Cartão Digital')),
+
         body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-              width: 350,
-              height: 200,
-              padding: const EdgeInsets.all(20.0),
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 0, 17, 1),
-                borderRadius: BorderRadius.circular(10),
+                width: 320,
+                height: 550,
+                padding: const EdgeInsets.all(20.0),
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 0, 110, 213),
+                  borderRadius: BorderRadius.circular(25),
                 ),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    Image.asset("assets/images/avatar-perfil.webp", width: 150),
+                    Text(
+                      "Rafael Leme Mega",
+                      style: TextStyle(color: Colors.white, fontSize: 30),
+                    ),
+                    Text(
+                      "Desenvolvedor Mobile",
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Banco SESI/SENAI", 
-                              style: TextStyle(color: Colors.white, fontSize: 20),
-                            ),
-                            SizedBox(
-                              height: 40,
-                            ),
-                            Text(
-                              "1234 5678 9012 3456",
-                              style: TextStyle(color: Colors.white, fontSize: 26),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Text(
-                              "Titular",
-                              style: TextStyle(color: Colors.white, fontSize: 10),
-                            ),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Text(
-                              "Rafael Leme Mega",
-                              style: TextStyle(color: Colors.white, fontSize: 16),
-                            ),
-                            
-                    
-                          ],
+                        Icon(
+                          Icons.email,
+                          color: Colors.white,
                         ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            Icon(
-                              Icons.contactless, size: 20, color: Colors.white,
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Icon(
-                              Icons.sim_card, size: 40, color: Colors.white,
-                            ),
-                            SizedBox(
-                              height: 60,
-                            ),
-                            Text(
-                              "Validade",
-                              style: TextStyle(color: Colors.white, fontSize: 10),
-                              )
-                          ],
-                        )
-                        
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          "rafaelmega@gmail.com",
+                          style: TextStyle(color: Colors.white, fontSize: 15),
+                        ),
                       ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.phone,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          "(19) 99999-9999",
+                          style: TextStyle(color: Colors.white, fontSize: 15),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.location_on,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          "Mococa - SP",
+                          style: TextStyle(color: Colors.white, fontSize: 15),
+                        ),
+                      ],
+                    ),
+                    SizedBox(  
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.star,
+                          color: Colors.amber,
+                        ),
+                        Icon(
+                          Icons.star,
+                          color: Colors.amber,
+                        ),
+                        Icon(
+                          Icons.star,
+                          color: Colors.amber,
+                        ),
+                        Icon(
+                          Icons.star,
+                          color: Colors.amber,
+                        ),
+                        Icon(
+                          Icons.star_half,
+                          color: Colors.amber,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          "4.5",
+                          style: TextStyle(color: Colors.white, fontSize: 15),
+                        ),
+                      ],
+                    ),
+                    SizedBox(  
+                      height: 30,
+                    ),
+                    Container(
+                      width: 100,
+                      height: 30,
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 255, 255, 255),
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Editar Perfil",
+                          style: TextStyle(color: Colors.blue, fontSize: 15),
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -98,7 +157,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-              
-               
-
-  
