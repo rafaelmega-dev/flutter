@@ -1,159 +1,83 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const LoginApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class LoginApp extends StatelessWidget {
+  const LoginApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text('Cartão Digital')),
-
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                width: 320,
-                height: 550,
-                padding: const EdgeInsets.all(20.0),
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 0, 110, 213),
-                  borderRadius: BorderRadius.circular(25),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Image.asset("assets/images/avatar-perfil.webp", width: 150),
-                    Text(
-                      "Rafael Leme Mega",
-                      style: TextStyle(color: Colors.white, fontSize: 30),
-                    ),
-                    Text(
-                      "Desenvolvedor Mobile",
-                      style: TextStyle(color: Colors.white, fontSize: 20),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.email,
-                          color: Colors.white,
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          "rafaelmega@gmail.com",
-                          style: TextStyle(color: Colors.white, fontSize: 15),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.phone,
-                          color: Colors.white,
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          "(19) 99999-9999",
-                          style: TextStyle(color: Colors.white, fontSize: 15),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.location_on,
-                          color: Colors.white,
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          "Mococa - SP",
-                          style: TextStyle(color: Colors.white, fontSize: 15),
-                        ),
-                      ],
-                    ),
-                    SizedBox(  
-                      height: 20,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.star,
-                          color: Colors.amber,
-                        ),
-                        Icon(
-                          Icons.star,
-                          color: Colors.amber,
-                        ),
-                        Icon(
-                          Icons.star,
-                          color: Colors.amber,
-                        ),
-                        Icon(
-                          Icons.star,
-                          color: Colors.amber,
-                        ),
-                        Icon(
-                          Icons.star_half,
-                          color: Colors.amber,
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          "4.5",
-                          style: TextStyle(color: Colors.white, fontSize: 15),
-                        ),
-                      ],
-                    ),
-                    SizedBox(  
-                      height: 30,
-                    ),
-                    Container(
-                      width: 100,
-                      height: 30,
-                      decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 255, 255, 255),
-                        borderRadius: BorderRadius.circular(25),
-                      ),
-                      child: Center(
-                        child: Text(
-                          "Editar Perfil",
-                          style: TextStyle(color: Colors.blue, fontSize: 15),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
+      title: "Tela de Login Responsiva",
+      home: const HomeScreen(),
     );
   }
 }
+        
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+
+    double largura = MediaQuery.of(context).size.width;
+    double altura = MediaQuery.of(context).size.height;
+
+    return Scaffold(
+      appBar: AppBar(
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Center(
+            child: Container(
+              width: largura * 0.9,
+              height: altura * 0.8,
+            child: Column(  
+              children: [
+                Icon(
+                  Icons.lock,
+                  size: largura * 0.2,
+                  color: Colors.blue
+                ),
+                SizedBox(height: altura * 0.05),
+                Text(
+                  "Login",
+                  style: TextStyle(
+                    fontSize: largura * 0.08,
+                    fontWeight: FontWeight.bold
+                  )
+                ),
+                SizedBox(height: altura * 0.05),
+                TextField(
+                    decoration: InputDecoration(
+                      labelText: "Email",
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                SizedBox(height: altura * 0.03),
+                TextField(
+                    decoration: InputDecoration(
+                    labelText: "Senha",
+                    border: OutlineInputBorder(),
+                  ),
+                  ),
+                
+
+
+            ],
+          )
+           
+        )
+      ),
+    ),
+    )
+    );
+  }
+}
+    
+
+        
+
+    
