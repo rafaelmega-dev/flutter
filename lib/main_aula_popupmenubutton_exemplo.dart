@@ -7,7 +7,7 @@ void main() {
 class MeuApp extends StatelessWidget {
   const MeuApp({super.key});
 
-  @override // <-- O único override do código!
+  @override 
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
@@ -15,7 +15,6 @@ class MeuApp extends StatelessWidget {
           title: const Text('Minha Loja', style: TextStyle(color: Colors.white)),
           backgroundColor: Colors.purple,
           actions: [
-            // O componente PopupMenuButton direto na AppBar
             PopupMenuButton<String>(
               iconColor: Colors.white,
               onSelected: (opcao) => print('Clicou em: $opcao'),

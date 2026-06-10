@@ -5,7 +5,7 @@ void main() => runApp(const MeuApp());
 class MeuApp extends StatelessWidget {
   const MeuApp({super.key});
 
-  @override // <-- Único override
+  @override 
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Builder(
