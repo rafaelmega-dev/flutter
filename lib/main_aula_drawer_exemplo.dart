@@ -10,8 +10,9 @@ class MeuApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Drawer'), 
-          backgroundColor: Colors.purple, 
+          title: const Text('Minhas Tarefas'), 
+          centerTitle: true,
+          backgroundColor: const Color.fromARGB(255, 39, 126, 176), 
           titleTextStyle: const TextStyle(color: Colors.white, fontSize: 20),
           iconTheme: const IconThemeData(color: Colors.white), 
         ),
