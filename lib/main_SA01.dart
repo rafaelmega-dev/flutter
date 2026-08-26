@@ -19,8 +19,8 @@ class MyApp extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-              width: 350,
-              height: 200,
+              width: 370,
+              height: 220,
               padding: const EdgeInsets.all(20.0),
               decoration: BoxDecoration(
                 color: const Color.fromARGB(255, 0, 17, 1),
